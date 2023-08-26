@@ -50,6 +50,9 @@ export function App() {
                 <Panel header="HP">
                   <RefinementList attribute="HP" />
                 </Panel>
+                <Panel header="Size">
+                  <RefinementList attribute="Size" />
+                </Panel>
                 <Panel header="Make">
                   <RefinementList attribute="Make" />
                 </Panel>
