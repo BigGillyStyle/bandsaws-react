@@ -1,4 +1,5 @@
 import algoliasearch from 'algoliasearch/lite';
+import 'instantsearch.css/themes/satellite.css';
 import React from 'react';
 import {
   Configure,
@@ -9,6 +10,7 @@ import {
   Pagination,
   RefinementList,
   SearchBox,
+  SortBy,
 } from 'react-instantsearch';
 
 import { Panel } from './Panel';
@@ -16,10 +18,11 @@ import { Panel } from './Panel';
 import type { Hit } from 'instantsearch.js';
 
 import './App.css';
+import { RangeSliderRadix } from './RangeSliderRadix';
 
 const searchClient = algoliasearch(
-  'SYGTRQB84S',
-  '2f4bea7736da46295fd879dc7641967a'
+  process.env.APP_ID,
+  process.env.SEARCH_API_KEY
 );
 
 export function App() {
@@ -42,22 +45,33 @@ export function App() {
           searchClient={searchClient}
           indexName="bandsaws2"
           insights={false}
+          routing={true}
         >
           <Configure hitsPerPage={8} />
+          <SortBy
+            items={[
+              { label: 'Default', value: 'bandsaws2' },
+              { label: 'Price (asc)', value: 'bandsaws2_price_asc' },
+              { label: 'Price (desc)', value: 'bandsaws2_price_desc' },
+            ]}
+          />
           <div className="search-panel">
             <div className="search-panel__filters">
               <DynamicWidgets fallback={RefinementList}>
-                <Panel header="HP">
-                  <RefinementList attribute="HP" />
+                <Panel header="Price">
+                  <RangeSliderRadix attribute="Price" />
                 </Panel>
                 <Panel header="Size">
-                  <RefinementList attribute="Size" />
+                  <RangeSliderRadix attribute="Size" />
+                </Panel>
+                <Panel header="Net Weight Pounds">
+                  <RangeSliderRadix attribute="Net Weight Pounds" />
+                </Panel>
+                <Panel header="HP">
+                  <RangeSliderRadix attribute="HP" />
                 </Panel>
                 <Panel header="Make">
                   <RefinementList attribute="Make" />
-                </Panel>
-                <Panel header="Price">
-                  <RefinementList attribute="Price" />
                 </Panel>
                 <Panel header="Voltage">
                   <RefinementList attribute="Voltage" />
@@ -79,9 +93,6 @@ export function App() {
                 </Panel>
                 <Panel header="Magnetic Switch">
                   <RefinementList attribute="Magnetic Switch" />
-                </Panel>
-                <Panel header="Net Weight Pounds">
-                  <RefinementList attribute="Net Weight Pounds" />
                 </Panel>
                 <Panel header="Max Cut Width Inches">
                   <RefinementList attribute="Max Cut Width Inches" />

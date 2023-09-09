@@ -11,6 +11,7 @@ node_modules
 dist
 .parcel-cache
 *.local
+.env
 
 # Editor directories and files
 .vscode
