@@ -21,8 +21,8 @@ import './App.css';
 import { RangeSliderRadix } from './RangeSliderRadix';
 
 const searchClient = algoliasearch(
-  process.env.APP_ID,
-  process.env.SEARCH_API_KEY
+  'SYGTRQB84S',
+  '2f4bea7736da46295fd879dc7641967a'
 );
 
 export function App() {
