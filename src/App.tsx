@@ -5,7 +5,6 @@ import {
   Configure,
   DynamicWidgets,
   Highlight,
-  Hits,
   InstantSearch,
   Pagination,
   RefinementList,
@@ -19,6 +18,7 @@ import type { Hit } from 'instantsearch.js';
 
 import './App.css';
 import { RangeSliderRadix } from './RangeSliderRadix';
+import ResultsTable from './ResultsTable';
 
 const searchClient = algoliasearch(
   'SYGTRQB84S',
@@ -114,10 +114,11 @@ export function App() {
 
             <div className="search-panel__results">
               <SearchBox placeholder="" className="searchbox" />
-              <Hits hitComponent={Hit} />
+              {/* <Hits hitComponent={Hit} /> */}
+              <ResultsTable />
 
               <div className="pagination">
-                <Pagination />
+                <Pagination />R
               </div>
             </div>
           </div>
