@@ -15,9 +15,8 @@ const USDollar = new Intl.NumberFormat('en-US', {
   maximumFractionDigits: 0,
 });
 
-export default function ResultsTable(props: UseHitsProps) {
+export default function ResultsTableMui(props: UseHitsProps) {
   const { hits } = useHits(props);
-  console.table(hits);
 
   return (
     <TableContainer component={Paper}>

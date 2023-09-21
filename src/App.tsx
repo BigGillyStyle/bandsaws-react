@@ -17,8 +17,8 @@ import { Panel } from './Panel';
 import type { Hit } from 'instantsearch.js';
 
 import './App.css';
-import { RangeSliderRadix } from './RangeSliderRadix';
-import ResultsTable from './ResultsTable';
+import RangeSliderMui from './RangeSliderMui';
+import ResultsTableMui from './ResultsTableMui';
 
 const searchClient = algoliasearch(
   'SYGTRQB84S',
@@ -59,16 +59,16 @@ export function App() {
             <div className="search-panel__filters">
               <DynamicWidgets fallback={RefinementList}>
                 <Panel header="Price">
-                  <RangeSliderRadix attribute="Price" />
+                  <RangeSliderMui attribute="Price" />
                 </Panel>
                 <Panel header="Size">
-                  <RangeSliderRadix attribute="Size" />
+                  <RangeSliderMui attribute="Size" />
                 </Panel>
                 <Panel header="Net Weight Pounds">
-                  <RangeSliderRadix attribute="Net Weight Pounds" />
+                  <RangeSliderMui attribute="Net Weight Pounds" />
                 </Panel>
                 <Panel header="HP">
-                  <RangeSliderRadix attribute="HP" />
+                  <RangeSliderMui attribute="HP" />
                 </Panel>
                 <Panel header="Make">
                   <RefinementList attribute="Make" />
@@ -115,7 +115,7 @@ export function App() {
             <div className="search-panel__results">
               <SearchBox placeholder="" className="searchbox" />
               {/* <Hits hitComponent={Hit} /> */}
-              <ResultsTable />
+              <ResultsTableMui />
 
               <div className="pagination">
                 <Pagination />R
