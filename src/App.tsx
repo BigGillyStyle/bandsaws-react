@@ -4,20 +4,15 @@ import React from 'react';
 import {
   Configure,
   DynamicWidgets,
-  Highlight,
   InstantSearch,
   Pagination,
-  RefinementList,
   SearchBox,
   SortBy,
 } from 'react-instantsearch';
-
-import { Panel } from './Panel';
-
-import type { Hit } from 'instantsearch.js';
-
 import './App.css';
+import { Panel } from './Panel';
 import RangeSliderMui from './RangeSliderMui';
+import RefinementListMui from './RefinementListMui';
 import ResultsTableMui from './ResultsTableMui';
 
 const searchClient = algoliasearch(
@@ -57,7 +52,7 @@ export function App() {
           />
           <div className="search-panel">
             <div className="search-panel__filters">
-              <DynamicWidgets fallback={RefinementList}>
+              <DynamicWidgets fallback={RefinementListMui}>
                 <Panel header="Price">
                   <RangeSliderMui attribute="Price" />
                 </Panel>
@@ -71,85 +66,58 @@ export function App() {
                   <RangeSliderMui attribute="HP" />
                 </Panel>
                 <Panel header="Make">
-                  <RefinementList attribute="Make" />
+                  <RefinementListMui attribute="Make" />
                 </Panel>
                 <Panel header="Voltage">
-                  <RefinementList attribute="Voltage" />
+                  <RefinementListMui attribute="Voltage" />
                 </Panel>
                 <Panel header="Dust Ports">
-                  <RefinementList attribute="Dust Ports" />
+                  <RefinementListMui attribute="Dust Ports" />
                 </Panel>
                 <Panel header="Foot Brake">
-                  <RefinementList attribute="Foot Brake" />
+                  <RefinementListMui attribute="Foot Brake" />
                 </Panel>
                 <Panel header="Phase Power">
-                  <RefinementList attribute="Phase Power" />
+                  <RefinementListMui attribute="Phase Power" />
                 </Panel>
                 <Panel header="Amperage 220">
-                  <RefinementList attribute="Amperage 220" />
+                  <RefinementListMui attribute="Amperage 220" />
                 </Panel>
                 <Panel header="Blade Guides">
-                  <RefinementList attribute="Blade Guides" />
+                  <RefinementListMui attribute="Blade Guides" />
                 </Panel>
                 <Panel header="Magnetic Switch">
-                  <RefinementList attribute="Magnetic Switch" />
+                  <RefinementListMui attribute="Magnetic Switch" />
                 </Panel>
                 <Panel header="Max Cut Width Inches">
-                  <RefinementList attribute="Max Cut Width Inches" />
+                  <RefinementListMui attribute="Max Cut Width Inches" />
                 </Panel>
                 <Panel header="Max Blade Size Inches">
-                  <RefinementList attribute="Max Blade Size Inches" />
+                  <RefinementListMui attribute="Max Blade Size Inches" />
                 </Panel>
                 <Panel header="Max Cut Height Inches">
-                  <RefinementList attribute="Max Cut Height Inches" />
+                  <RefinementListMui attribute="Max Cut Height Inches" />
                 </Panel>
                 <Panel header="Min Blade Size Inches">
-                  <RefinementList attribute="Min Blade Size Inches" />
+                  <RefinementListMui attribute="Min Blade Size Inches" />
                 </Panel>
                 <Panel header="Shipping Weight Pounds">
-                  <RefinementList attribute="Shipping Weight Pounds" />
+                  <RefinementListMui attribute="Shipping Weight Pounds" />
                 </Panel>
               </DynamicWidgets>
             </div>
 
             <div className="search-panel__results">
               <SearchBox placeholder="" className="searchbox" />
-              {/* <Hits hitComponent={Hit} /> */}
               <ResultsTableMui />
 
               <div className="pagination">
-                <Pagination />R
+                <Pagination />
               </div>
             </div>
           </div>
         </InstantSearch>
       </div>
     </div>
-  );
-}
-
-type HitProps = {
-  hit: Hit;
-};
-
-function Hit({ hit }: HitProps) {
-  return (
-    <article>
-      <h1>
-        <Highlight attribute="Model" hit={hit} />
-      </h1>
-      <p>
-        <Highlight attribute="Make" hit={hit} />
-      </p>
-      <p>
-        <Highlight attribute="Price" hit={hit} />
-      </p>
-      <p>
-        <Highlight attribute="Website" hit={hit} />
-      </p>
-      <p>
-        <Highlight attribute="Image URL" hit={hit} />
-      </p>
-    </article>
   );
 }
