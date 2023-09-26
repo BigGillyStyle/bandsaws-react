@@ -10,6 +10,7 @@
     "@adobe/react-spectrum": "^3.30.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
     "@mui/system": "^5.14.10",
     "@radix-ui/react-slider": "^1.1.2",
