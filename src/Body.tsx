@@ -30,7 +30,7 @@ export function Body() {
         insights={false}
         routing={true}
       >
-        <Configure hitsPerPage={8} />
+        <Configure hitsPerPage={20} />
         {/* <SortBy
           items={[
             { label: 'Default', value: 'bandsaws2' },
@@ -38,7 +38,7 @@ export function Body() {
             { label: 'Price (desc)', value: 'bandsaws2_price_desc' },
           ]}
         /> */}
-        <Grid item xs={3}>
+        <Grid item xs={3} sx={{ padding: '1rem' }}>
           <DynamicWidgets fallback={RefinementListMui}>
             <Panel header="Price">
               <RangeSliderMui attribute="Price" />
