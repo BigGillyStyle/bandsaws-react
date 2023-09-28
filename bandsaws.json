@@ -125,7 +125,7 @@
    "Max Blade Size Inches": 1,
    "Blade Guides": ["ball bearing", "ceramic"],
    "Foot Brake": true,
-   "Dust Ports": false,
+   "Dust Ports": 1,
    "Magnetic Switch": 1,
    "Net Weight Pounds": 375,
    "Shipping Weight Pounds": null,
