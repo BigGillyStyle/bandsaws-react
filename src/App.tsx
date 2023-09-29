@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import 'instantsearch.css/themes/satellite.css';
 import React from 'react';
@@ -7,9 +8,11 @@ import Header from './Header';
 export function App() {
   return (
     <>
-      <CssBaseline />
-      <Header />
-      <Body />
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <Header />
+        <Body />
+      </Box>
     </>
   );
 }
