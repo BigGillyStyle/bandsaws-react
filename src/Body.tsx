@@ -7,14 +7,12 @@ import {
   DynamicWidgets,
   InstantSearch,
   Pagination,
-  SearchBox,
 } from 'react-instantsearch';
 import './Body.css';
 import { Panel } from './Panel';
 import RangeSliderMui from './components/RangeSliderMui';
 import RefinementListMui from './components/RefinementListMui';
 import ResultsTableMui from './components/ResultsTableMui';
-import SortByMui from './components/SortByMui';
 
 const searchClient = algoliasearch(
   'SYGTRQB84S',
@@ -88,14 +86,14 @@ export function Body() {
         </Grid>
 
         <Grid item xs={10}>
-          <SortByMui
+          {/* <SortByMui
             items={[
               { label: 'Default', value: 'bandsaws' },
               { label: 'Price (asc)', value: 'bandsaws_price_asc' },
               { label: 'Price (desc)', value: 'bandsaws_price_desc' },
             ]}
           />
-          <SearchBox placeholder="" />
+          <SearchBox placeholder="" /> */}
           <ResultsTableMui />
 
           <div className="pagination">
