@@ -72,7 +72,9 @@ export default function ResultsTableMui(props: UseHitsProps) {
               <TableCell>{hit.amperage110}</TableCell>
               <TableCell>{hit.amperage220}</TableCell>
               <TableCell>
-                <Link href="{hit.website}">link</Link>
+                <Link href={hit.website} target="_blank">
+                  link
+                </Link>
               </TableCell>
             </TableRow>
           ))}
