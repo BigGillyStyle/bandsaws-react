@@ -11,10 +11,10 @@ import {
 } from 'react-instantsearch';
 import './Body.css';
 import { Panel } from './Panel';
-import RangeSliderMui from './RangeSliderMui';
-import RefinementListMui from './RefinementListMui';
-import ResultsTableMui from './ResultsTableMui';
-import SortByMui from './SortByMui';
+import RangeSliderMui from './components/RangeSliderMui';
+import RefinementListMui from './components/RefinementListMui';
+import ResultsTableMui from './components/ResultsTableMui';
+import SortByMui from './components/SortByMui';
 
 const searchClient = algoliasearch(
   'SYGTRQB84S',
@@ -26,80 +26,73 @@ export function Body() {
     <Grid container>
       <InstantSearch
         searchClient={searchClient}
-        indexName="bandsaws2"
+        indexName="bandsaws"
         insights={false}
         routing={true}
       >
         <Configure hitsPerPage={20} />
-        {/* <SortBy
-          items={[
-            { label: 'Default', value: 'bandsaws2' },
-            { label: 'Price (asc)', value: 'bandsaws2_price_asc' },
-            { label: 'Price (desc)', value: 'bandsaws2_price_desc' },
-          ]}
-        /> */}
-        <Grid item xs={3} sx={{ padding: '1rem' }}>
+        <Grid item xs={2} sx={{ padding: '1rem' }}>
           <DynamicWidgets fallback={RefinementListMui}>
             <Panel header="Price">
-              <RangeSliderMui attribute="Price" />
+              <RangeSliderMui attribute="price" />
             </Panel>
             <Panel header="Size">
-              <RangeSliderMui attribute="Size" />
+              <RangeSliderMui attribute="size" />
             </Panel>
             <Panel header="Net Weight Pounds">
-              <RangeSliderMui attribute="Net Weight Pounds" />
+              <RangeSliderMui attribute="netWeightPounds" />
             </Panel>
             <Panel header="HP">
-              <RangeSliderMui attribute="HP" />
+              <RangeSliderMui attribute="hp" />
             </Panel>
             <Panel header="Make">
-              <RefinementListMui attribute="Make" />
+              <RefinementListMui attribute="make" />
             </Panel>
             <Panel header="Voltage">
-              <RefinementListMui attribute="Voltage" />
+              <RefinementListMui attribute="voltage" />
             </Panel>
             <Panel header="Dust Ports">
-              <RefinementListMui attribute="Dust Ports" />
+              <RefinementListMui attribute="dustPorts" />
             </Panel>
             <Panel header="Foot Brake">
-              <RefinementListMui attribute="Foot Brake" />
+              <RefinementListMui attribute="footBrake" />
             </Panel>
             <Panel header="Phase Power">
-              <RefinementListMui attribute="Phase Power" />
+              <RefinementListMui attribute="phasePower" />
             </Panel>
             <Panel header="Amperage 220">
-              <RefinementListMui attribute="Amperage 220" />
+              <RefinementListMui attribute="amperage220" />
             </Panel>
             <Panel header="Blade Guides">
-              <RefinementListMui attribute="Blade Guides" />
+              <RefinementListMui attribute="bladeGuides" />
             </Panel>
             <Panel header="Magnetic Switch">
-              <RefinementListMui attribute="Magnetic Switch" />
+              <RefinementListMui attribute="magneticSwitch" />
             </Panel>
             <Panel header="Max Cut Width Inches">
-              <RefinementListMui attribute="Max Cut Width Inches" />
+              <RefinementListMui attribute="maxCutWidthInches" />
             </Panel>
             <Panel header="Max Blade Size Inches">
-              <RefinementListMui attribute="Max Blade Size Inches" />
+              <RefinementListMui attribute="maxBladeSizeInches" />
             </Panel>
             <Panel header="Max Cut Height Inches">
-              <RefinementListMui attribute="Max Cut Height Inches" />
+              <RefinementListMui attribute="maxCutHeightInches" />
             </Panel>
             <Panel header="Min Blade Size Inches">
-              <RefinementListMui attribute="Min Blade Size Inches" />
+              <RefinementListMui attribute="minBladeSizeInches" />
             </Panel>
             <Panel header="Shipping Weight Pounds">
-              <RefinementListMui attribute="Shipping Weight Pounds" />
+              <RefinementListMui attribute="shippingWeightPounds" />
             </Panel>
           </DynamicWidgets>
         </Grid>
 
-        <Grid item xs={9}>
+        <Grid item xs={10}>
           <SortByMui
             items={[
-              { label: 'Default', value: 'bandsaws2' },
-              { label: 'Price (asc)', value: 'bandsaws2_price_asc' },
-              { label: 'Price (desc)', value: 'bandsaws2_price_desc' },
+              { label: 'Default', value: 'bandsaws' },
+              { label: 'Price (asc)', value: 'bandsaws_price_asc' },
+              { label: 'Price (desc)', value: 'bandsaws_price_desc' },
             ]}
           />
           <SearchBox placeholder="" />
