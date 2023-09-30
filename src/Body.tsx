@@ -4,17 +4,12 @@ import Toolbar from '@mui/material/Toolbar';
 import algoliasearch from 'algoliasearch/lite';
 import 'instantsearch.css/themes/satellite.css';
 import React from 'react';
-import {
-  Configure,
-  DynamicWidgets,
-  InstantSearch,
-  Pagination,
-} from 'react-instantsearch';
+import { Configure, DynamicWidgets, InstantSearch } from 'react-instantsearch';
 import './Body.css';
 import { Panel } from './Panel';
 import RangeSliderMui from './components/RangeSliderMui';
 import RefinementListMui from './components/RefinementListMui';
-import ResultsTableMui from './components/ResultsTableMui';
+import ResultsDataGridMui from './components/ResultsDataGridMui';
 
 const searchClient = algoliasearch(
   'SYGTRQB84S',
@@ -30,7 +25,7 @@ export function Body() {
       insights={false}
       routing={true}
     >
-      <Configure hitsPerPage={20} />
+      <Configure hitsPerPage={1000} />
       <Drawer
         sx={{
           width: drawerWidth,
@@ -101,7 +96,12 @@ export function Body() {
 
       <Box
         component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
+        sx={{
+          flexGrow: 1,
+          bgcolor: 'background.default',
+          p: 3,
+          maxHeight: '100vh',
+        }}
       >
         {/* <SortByMui
             items={[
@@ -112,11 +112,12 @@ export function Body() {
           />
           <SearchBox placeholder="" /> */}
         <Toolbar />
-        <ResultsTableMui />
+        {/* <ResultsTableMui /> */}
+        <ResultsDataGridMui />
 
-        <div className="pagination">
+        {/* <div className="pagination">
           <Pagination />
-        </div>
+        </div> */}
       </Box>
     </InstantSearch>
   );
