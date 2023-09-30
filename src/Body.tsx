@@ -6,7 +6,7 @@ import 'instantsearch.css/themes/satellite.css';
 import React from 'react';
 import { Configure, DynamicWidgets, InstantSearch } from 'react-instantsearch';
 import './Body.css';
-import { Panel } from './Panel';
+import { PanelMui } from './components/PanelMui';
 import RangeSliderMui from './components/RangeSliderMui';
 import RefinementListMui from './components/RefinementListMui';
 import ResultsDataGridMui from './components/ResultsDataGridMui';
@@ -40,57 +40,57 @@ export function Body() {
         anchor="left"
       >
         <DynamicWidgets fallback={RefinementListMui}>
-          <Panel header="Price">
+          <PanelMui header="Price">
             <RangeSliderMui attribute="price" />
-          </Panel>
-          <Panel header="Size">
+          </PanelMui>
+          <PanelMui header="Size">
             <RangeSliderMui attribute="size" />
-          </Panel>
-          <Panel header="Net Weight Pounds">
+          </PanelMui>
+          <PanelMui header="Net Weight Pounds">
             <RangeSliderMui attribute="netWeightPounds" />
-          </Panel>
-          <Panel header="HP">
+          </PanelMui>
+          <PanelMui header="HP">
             <RangeSliderMui attribute="hp" />
-          </Panel>
-          <Panel header="Make">
+          </PanelMui>
+          <PanelMui header="Make">
             <RefinementListMui attribute="make" />
-          </Panel>
-          <Panel header="Voltage">
+          </PanelMui>
+          <PanelMui header="Voltage">
             <RefinementListMui attribute="voltage" />
-          </Panel>
-          <Panel header="Dust Ports">
+          </PanelMui>
+          <PanelMui header="Dust Ports">
             <RefinementListMui attribute="dustPorts" />
-          </Panel>
-          <Panel header="Foot Brake">
+          </PanelMui>
+          <PanelMui header="Foot Brake">
             <RefinementListMui attribute="footBrake" />
-          </Panel>
-          <Panel header="Phase Power">
+          </PanelMui>
+          <PanelMui header="Phase Power">
             <RefinementListMui attribute="phasePower" />
-          </Panel>
-          <Panel header="Amperage 220">
+          </PanelMui>
+          <PanelMui header="Amperage 220">
             <RefinementListMui attribute="amperage220" />
-          </Panel>
-          <Panel header="Blade Guides">
+          </PanelMui>
+          <PanelMui header="Blade Guides">
             <RefinementListMui attribute="bladeGuides" />
-          </Panel>
-          <Panel header="Magnetic Switch">
+          </PanelMui>
+          <PanelMui header="Magnetic Switch">
             <RefinementListMui attribute="magneticSwitch" />
-          </Panel>
-          <Panel header="Max Cut Width Inches">
+          </PanelMui>
+          <PanelMui header="Max Cut Width Inches">
             <RefinementListMui attribute="maxCutWidthInches" />
-          </Panel>
-          <Panel header="Max Blade Size Inches">
+          </PanelMui>
+          <PanelMui header="Max Blade Size Inches">
             <RefinementListMui attribute="maxBladeSizeInches" />
-          </Panel>
-          <Panel header="Max Cut Height Inches">
+          </PanelMui>
+          <PanelMui header="Max Cut Height Inches">
             <RefinementListMui attribute="maxCutHeightInches" />
-          </Panel>
-          <Panel header="Min Blade Size Inches">
+          </PanelMui>
+          <PanelMui header="Min Blade Size Inches">
             <RefinementListMui attribute="minBladeSizeInches" />
-          </Panel>
-          <Panel header="Shipping Weight Pounds">
+          </PanelMui>
+          <PanelMui header="Shipping Weight Pounds">
             <RefinementListMui attribute="shippingWeightPounds" />
-          </Panel>
+          </PanelMui>
         </DynamicWidgets>
       </Drawer>
 
@@ -103,21 +103,8 @@ export function Body() {
           maxHeight: '100vh',
         }}
       >
-        {/* <SortByMui
-            items={[
-              { label: 'Default', value: 'bandsaws' },
-              { label: 'Price (asc)', value: 'bandsaws_price_asc' },
-              { label: 'Price (desc)', value: 'bandsaws_price_desc' },
-            ]}
-          />
-          <SearchBox placeholder="" /> */}
         <Toolbar />
-        {/* <ResultsTableMui /> */}
         <ResultsDataGridMui />
-
-        {/* <div className="pagination">
-          <Pagination />
-        </div> */}
       </Box>
     </InstantSearch>
   );

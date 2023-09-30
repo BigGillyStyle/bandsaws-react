@@ -1,13 +1,34 @@
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
+import {
+  DataGrid,
+  GridColDef,
+  GridRenderCellParams,
+  GridValueFormatterParams,
+} from '@mui/x-data-grid';
 import * as React from 'react';
 import { UseHitsProps, useHits } from 'react-instantsearch';
+
+const USDollar = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  maximumFractionDigits: 0,
+});
 
 const columns: GridColDef[] = [
   { field: 'make', headerName: 'Manufacturer', width: 150 },
   { field: 'model', headerName: 'Model', width: 150 },
-  { field: 'price', headerName: 'Price', type: 'number' },
+  {
+    field: 'price',
+    headerName: 'Price',
+    type: 'number',
+    valueFormatter: (params: GridValueFormatterParams<number>) => {
+      if (params.value == null) {
+        return '';
+      }
+      return USDollar.format(params.value);
+    },
+  },
   { field: 'size', headerName: 'Size (in.)', type: 'number' },
   { field: 'hp', headerName: 'HP', type: 'number', width: 75 },
   {

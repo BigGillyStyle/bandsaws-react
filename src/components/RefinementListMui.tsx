@@ -1,5 +1,8 @@
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import React from 'react';
 import { useRefinementList, UseRefinementListProps } from 'react-instantsearch';
 
@@ -15,20 +18,22 @@ export default function RefinementListMui(props: UseRefinementListProps) {
 
   return (
     <>
-      <ul style={{ padding: 0 }}>
+      <List>
         {items.map((item) => (
-          <li key={item.label} style={{ listStyleType: 'none' }}>
-            <label>
-              <Checkbox
-                checked={item.isRefined}
-                onChange={() => refine(item.value)}
-              />
-              <span>{item.label}</span>
-              <span> ({item.count})</span>
-            </label>
-          </li>
+          <ListItem key={item.label} disablePadding>
+            <Checkbox
+              edge="start"
+              checked={item.isRefined}
+              onChange={() => refine(item.value)}
+              sx={{ padding: '3px' }}
+            />
+            <ListItemText
+              primary={`${item.label} (${item.count})`}
+              primaryTypographyProps={{ variant: 'body2' }}
+            />
+          </ListItem>
         ))}
-      </ul>
+      </List>
       {canToggleShowMore && (
         <Button onClick={toggleShowMore}>
           {isShowingMore ? 'Show less' : 'Show more'}
