@@ -46,8 +46,11 @@ export function Body() {
           <PanelMui header="Size">
             <RangeSliderMui attribute="size" />
           </PanelMui>
-          <PanelMui header="Net Weight Pounds">
+          <PanelMui header="Net Weight (lb.)">
             <RangeSliderMui attribute="netWeightPounds" />
+          </PanelMui>
+          <PanelMui header="Shipping Weight (lb.)">
+            <RangeSliderMui attribute="shippingWeightPounds" />
           </PanelMui>
           <PanelMui header="HP">
             <RangeSliderMui attribute="hp" />
@@ -67,7 +70,7 @@ export function Body() {
           <PanelMui header="Phase Power">
             <RefinementListMui attribute="phasePower" />
           </PanelMui>
-          <PanelMui header="Amperage 220">
+          <PanelMui header="Amps (220)">
             <RefinementListMui attribute="amperage220" />
           </PanelMui>
           <PanelMui header="Blade Guides">
@@ -76,20 +79,17 @@ export function Body() {
           <PanelMui header="Magnetic Switch">
             <RefinementListMui attribute="magneticSwitch" />
           </PanelMui>
-          <PanelMui header="Max Cut Width Inches">
+          <PanelMui header="Max Cut Width (in.)">
             <RefinementListMui attribute="maxCutWidthInches" />
           </PanelMui>
-          <PanelMui header="Max Blade Size Inches">
+          <PanelMui header="Max Blade Size (in.)">
             <RefinementListMui attribute="maxBladeSizeInches" />
           </PanelMui>
-          <PanelMui header="Max Cut Height Inches">
+          <PanelMui header="Max Cut Height (in.)">
             <RefinementListMui attribute="maxCutHeightInches" />
           </PanelMui>
-          <PanelMui header="Min Blade Size Inches">
+          <PanelMui header="Min Blade Size (in.)">
             <RefinementListMui attribute="minBladeSizeInches" />
-          </PanelMui>
-          <PanelMui header="Shipping Weight Pounds">
-            <RefinementListMui attribute="shippingWeightPounds" />
           </PanelMui>
         </DynamicWidgets>
       </Drawer>

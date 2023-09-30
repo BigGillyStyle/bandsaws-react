@@ -126,7 +126,7 @@
    "bladeGuides": ["ball bearing", "ceramic"],
    "footBrake": true,
    "dustPorts": 1,
-   "magneticSwitch": 1,
+   "magneticSwitch": false,
    "netWeightPounds": 375,
    "shippingWeightPounds": null,
    "hp": 3.5,

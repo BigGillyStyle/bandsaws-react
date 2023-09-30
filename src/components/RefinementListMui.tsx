@@ -3,8 +3,16 @@ import Checkbox from '@mui/material/Checkbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import React from 'react';
-import { useRefinementList, UseRefinementListProps } from 'react-instantsearch';
+import React, { useEffect } from 'react';
+import { UseRefinementListProps, useRefinementList } from 'react-instantsearch';
+
+function sortItems(items: any[]) {
+  if (items.every((item) => !Number.isNaN(parseInt(item.value)))) {
+    return [...items].sort((a, b) => parseInt(a.value) - parseInt(b.value));
+  } else {
+    return items;
+  }
+}
 
 export default function RefinementListMui(props: UseRefinementListProps) {
   const {
@@ -16,11 +24,20 @@ export default function RefinementListMui(props: UseRefinementListProps) {
     toggleShowMore,
   } = useRefinementList(props);
 
+  let sortedItems = sortItems(items);
+  useEffect(() => {
+    sortedItems = sortItems(items);
+  }, [items]);
+
   return (
     <>
       <List>
-        {items.map((item) => (
-          <ListItem key={item.label} disablePadding>
+        {sortedItems.map((item) => (
+          <ListItem
+            key={item.label}
+            disablePadding
+            secondaryAction={`(${item.count})`}
+          >
             <Checkbox
               edge="start"
               checked={item.isRefined}
@@ -28,7 +45,7 @@ export default function RefinementListMui(props: UseRefinementListProps) {
               sx={{ padding: '3px' }}
             />
             <ListItemText
-              primary={`${item.label} (${item.count})`}
+              primary={item.label}
               primaryTypographyProps={{ variant: 'body2' }}
             />
           </ListItem>
