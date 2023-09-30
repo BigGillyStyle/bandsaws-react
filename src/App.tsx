@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import 'instantsearch.css/themes/algolia.css';
 import React from 'react';
 import { Body } from './Body';
 import Header from './Header';
