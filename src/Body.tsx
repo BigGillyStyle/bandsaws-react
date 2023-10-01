@@ -10,12 +10,12 @@ import { PanelMui } from './components/PanelMui';
 import RangeSliderMui from './components/RangeSliderMui';
 import RefinementListMui from './components/RefinementListMui';
 import ResultsDataGridMui from './components/ResultsDataGridMui';
+import { drawerWidth } from './constants';
 
 const searchClient = algoliasearch(
   'SYGTRQB84S',
   '2f4bea7736da46295fd879dc7641967a'
 );
-const drawerWidth = 240;
 
 export function Body() {
   return (
@@ -33,7 +33,7 @@ export function Body() {
           '& .MuiDrawer-paper': {
             width: drawerWidth,
             boxSizing: 'border-box',
-            p: '1rem',
+            p: '2rem',
           },
         }}
         variant="permanent"

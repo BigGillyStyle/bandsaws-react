@@ -1,4 +1,3 @@
-import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import React, { useEffect, useState } from 'react';
 import { useRange } from 'react-instantsearch';
@@ -29,16 +28,18 @@ export default function RangeSliderMui(props) {
   }, [from, to]);
 
   return (
-    <Box>
-      <Slider
-        min={min}
-        max={max}
-        value={value}
-        onChange={handleChange}
-        onChangeCommitted={handleChangeCommitted}
-        disabled={!canRefine}
-        valueLabelDisplay="auto"
-      />
-    </Box>
+    <Slider
+      min={min}
+      max={max}
+      value={value}
+      onChange={handleChange}
+      onChangeCommitted={handleChangeCommitted}
+      disabled={!canRefine}
+      valueLabelDisplay="on"
+      sx={{
+        marginTop: '2rem',
+        marginBottom: '0.5rem',
+      }}
+    />
   );
 }

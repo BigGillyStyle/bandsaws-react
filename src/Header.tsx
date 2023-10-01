@@ -2,8 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-
-const drawerWidth = 240;
+import { drawerWidth } from './constants';
 
 export default function Header() {
   return (

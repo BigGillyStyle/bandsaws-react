@@ -14,20 +14,10 @@ function sortItems(items: any[]) {
 }
 
 export default function RefinementListMui(props: UseRefinementListProps) {
-  const {
-    items,
-    refine,
-    // searchForItems,
-    canToggleShowMore,
-    isShowingMore,
-    toggleShowMore,
-  } = useRefinementList(props);
+  const { items, refine, canToggleShowMore, isShowingMore, toggleShowMore } =
+    useRefinementList(props);
 
   let sortedItems = items;
-  // let sortedItems = sortItems(items);
-  // useEffect(() => {
-  //   sortedItems = sortItems(items);
-  // }, [items]);
 
   return (
     <>
