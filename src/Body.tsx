@@ -46,14 +46,23 @@ export function Body() {
           <PanelMui header="Size">
             <RangeSliderMui attribute="size" />
           </PanelMui>
+          <PanelMui header="HP">
+            <RangeSliderMui attribute="hp" />
+          </PanelMui>
           <PanelMui header="Net Weight (lb.)">
             <RangeSliderMui attribute="netWeightPounds" />
           </PanelMui>
-          <PanelMui header="Shipping Weight (lb.)">
-            <RangeSliderMui attribute="shippingWeightPounds" />
+          <PanelMui header="Max Cut Width (in.)">
+            <RangeSliderMui attribute="maxCutWidthInches" />
           </PanelMui>
-          <PanelMui header="HP">
-            <RangeSliderMui attribute="hp" />
+          <PanelMui header="Max Blade Size (in.)">
+            <RangeSliderMui attribute="maxBladeSizeInches" />
+          </PanelMui>
+          <PanelMui header="Max Cut Height (in.)">
+            <RangeSliderMui attribute="maxCutHeightInches" />
+          </PanelMui>
+          <PanelMui header="Min Blade Size (in.)">
+            <RangeSliderMui attribute="minBladeSizeInches" />
           </PanelMui>
           <PanelMui header="Make">
             <RefinementListMui attribute="make" />
@@ -71,7 +80,7 @@ export function Body() {
             <RefinementListMui attribute="phasePower" />
           </PanelMui>
           <PanelMui header="Amps (220)">
-            <RefinementListMui attribute="amperage220" />
+            <RangeSliderMui attribute="amperage220" />
           </PanelMui>
           <PanelMui header="Blade Guides">
             <RefinementListMui attribute="bladeGuides" />
@@ -79,17 +88,8 @@ export function Body() {
           <PanelMui header="Magnetic Switch">
             <RefinementListMui attribute="magneticSwitch" />
           </PanelMui>
-          <PanelMui header="Max Cut Width (in.)">
-            <RefinementListMui attribute="maxCutWidthInches" />
-          </PanelMui>
-          <PanelMui header="Max Blade Size (in.)">
-            <RefinementListMui attribute="maxBladeSizeInches" />
-          </PanelMui>
-          <PanelMui header="Max Cut Height (in.)">
-            <RefinementListMui attribute="maxCutHeightInches" />
-          </PanelMui>
-          <PanelMui header="Min Blade Size (in.)">
-            <RefinementListMui attribute="minBladeSizeInches" />
+          <PanelMui header="Shipping Weight (lb.)">
+            <RangeSliderMui attribute="shippingWeightPounds" />
           </PanelMui>
         </DynamicWidgets>
       </Drawer>

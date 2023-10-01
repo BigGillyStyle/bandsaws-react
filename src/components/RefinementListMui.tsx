@@ -3,15 +3,14 @@ import Checkbox from '@mui/material/Checkbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { UseRefinementListProps, useRefinementList } from 'react-instantsearch';
 
 function sortItems(items: any[]) {
   if (items.every((item) => !Number.isNaN(parseInt(item.value)))) {
     return [...items].sort((a, b) => parseInt(a.value) - parseInt(b.value));
-  } else {
-    return items;
   }
+  return items;
 }
 
 export default function RefinementListMui(props: UseRefinementListProps) {
@@ -24,10 +23,11 @@ export default function RefinementListMui(props: UseRefinementListProps) {
     toggleShowMore,
   } = useRefinementList(props);
 
-  let sortedItems = sortItems(items);
-  useEffect(() => {
-    sortedItems = sortItems(items);
-  }, [items]);
+  let sortedItems = items;
+  // let sortedItems = sortItems(items);
+  // useEffect(() => {
+  //   sortedItems = sortItems(items);
+  // }, [items]);
 
   return (
     <>

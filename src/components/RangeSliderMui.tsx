@@ -13,6 +13,11 @@ export default function RangeSliderMui(props) {
   };
 
   const handleChangeCommitted = (event: Event, value: number | number[]) => {
+    console.log(
+      '🚀 ~ file: RangeSliderMui.tsx:35 ~ handleChangeCommitted ~ value:',
+      props.attribute,
+      value
+    );
     refine(value as [number, number]);
   };
 
