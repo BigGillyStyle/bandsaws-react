@@ -56,13 +56,13 @@ const columns: GridColDef[] = [
     width: 150,
   },
   {
-    field: 'minBladeSizeInches',
+    field: 'minBladeWidthInches',
     headerName: 'Min Blade Size (in.)',
     type: 'number',
     width: 150,
   },
   {
-    field: 'maxBladeSizeInches',
+    field: 'maxBladeWidthInches',
     headerName: 'Max Blade Size (in.)',
     type: 'number',
     width: 150,

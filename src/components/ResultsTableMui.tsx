@@ -62,8 +62,8 @@ export default function ResultsTableMui(props: UseHitsProps) {
                 <TableCell>{hit.shippingWeightPounds}</TableCell>
                 <TableCell>{hit.maxCutWidthInches}</TableCell>
                 <TableCell>{hit.maxCutHeightInches}</TableCell>
-                <TableCell>{hit.minBladeSizeInches}</TableCell>
-                <TableCell>{hit.maxBladeSizeInches}</TableCell>
+                <TableCell>{hit.minBladeWidthInches}</TableCell>
+                <TableCell>{hit.maxBladeWidthInches}</TableCell>
                 <TableCell>{hit.bladeGuides.join(', ')}</TableCell>
                 <TableCell>{hit.footBrake ? 'Y' : 'N'}</TableCell>
                 <TableCell>{hit.dustPorts}</TableCell>

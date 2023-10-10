@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
 import algoliasearch from 'algoliasearch/lite';
-import 'instantsearch.css/themes/satellite.css';
 import React from 'react';
 import { Configure, DynamicWidgets, InstantSearch } from 'react-instantsearch';
 import './Body.css';
@@ -56,13 +55,13 @@ export function Body() {
             <RangeSliderMui attribute="maxCutWidthInches" />
           </PanelMui>
           <PanelMui header="Max Blade Size (in.)">
-            <RangeSliderMui attribute="maxBladeSizeInches" />
+            <RangeSliderMui attribute="maxBladeWidthInches" />
           </PanelMui>
           <PanelMui header="Max Cut Height (in.)">
             <RangeSliderMui attribute="maxCutHeightInches" />
           </PanelMui>
           <PanelMui header="Min Blade Size (in.)">
-            <RangeSliderMui attribute="minBladeSizeInches" />
+            <RangeSliderMui attribute="minBladeWidthInches" />
           </PanelMui>
           <PanelMui header="Make">
             <RefinementListMui attribute="make" />
