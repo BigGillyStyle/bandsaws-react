@@ -1,8 +1,9 @@
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import { DataGrid, GridColDef, GridRenderCellParams, GridValueFormatterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRenderCellParams, GridRowParams, GridValueFormatterParams } from '@mui/x-data-grid';
 import * as React from 'react';
 import { UseHitsProps, useHits } from 'react-instantsearch';
+import './ResultsDataGridMui.css';
 
 const USDollar = new Intl.NumberFormat('en-US', {
   style: 'currency',
@@ -102,12 +103,17 @@ const columns: GridColDef[] = [
 
 const getRowId = (row: any) => row.objectID;
 
+const getRowClassName = (params: GridRowParams) => {
+  console.log('🚀 ~ file: ResultsDataGridMui.tsx:107 ~ getRowClassName ~ params:', params);
+  return params.indexRelativeToCurrentPage % 2 === 0 ? 'even-row' : 'odd-row';
+};
+
 export default function ResultsDataGridMui(props: UseHitsProps) {
   const { hits } = useHits(props);
 
   return (
     <Box sx={{ height: '100vh', width: '100%' }}>
-      <DataGrid rows={hits} columns={columns} rowHeight={30} getRowId={getRowId} disableRowSelectionOnClick />
+      <DataGrid rows={hits} columns={columns} rowHeight={30} getRowId={getRowId} getRowClassName={getRowClassName} disableRowSelectionOnClick />
     </Box>
   );
 }

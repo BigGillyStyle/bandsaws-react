@@ -11,19 +11,11 @@ import RefinementListMui from './components/RefinementListMui';
 import ResultsDataGridMui from './components/ResultsDataGridMui';
 import { drawerWidth } from './constants';
 
-const searchClient = algoliasearch(
-  'SYGTRQB84S',
-  '2f4bea7736da46295fd879dc7641967a'
-);
+const searchClient = algoliasearch('SYGTRQB84S', '2f4bea7736da46295fd879dc7641967a');
 
 export function Body() {
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName="bandsaws"
-      insights={false}
-      routing={true}
-    >
+    <InstantSearch searchClient={searchClient} indexName="bandsaws" insights={false} routing={true}>
       <Configure hitsPerPage={1000} />
       <Drawer
         sx={{
@@ -63,7 +55,7 @@ export function Body() {
           <PanelMui header="Min Blade Size (in.)">
             <RangeSliderMui attribute="minBladeWidthInches" />
           </PanelMui>
-          <PanelMui header="Make">
+          <PanelMui header="Manufacturer">
             <RefinementListMui attribute="make" />
           </PanelMui>
           <PanelMui header="Voltage">

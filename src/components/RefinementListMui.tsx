@@ -14,8 +14,7 @@ function sortItems(items: any[]) {
 }
 
 export default function RefinementListMui(props: UseRefinementListProps) {
-  const { items, refine, canToggleShowMore, isShowingMore, toggleShowMore } =
-    useRefinementList(props);
+  const { items, refine, canToggleShowMore, isShowingMore, toggleShowMore } = useRefinementList({ ...props, limit: 1000 });
 
   let sortedItems = items;
 
@@ -23,29 +22,13 @@ export default function RefinementListMui(props: UseRefinementListProps) {
     <>
       <List>
         {sortedItems.map((item) => (
-          <ListItem
-            key={item.label}
-            disablePadding
-            secondaryAction={`(${item.count})`}
-          >
-            <Checkbox
-              edge="start"
-              checked={item.isRefined}
-              onChange={() => refine(item.value)}
-              sx={{ padding: '3px' }}
-            />
-            <ListItemText
-              primary={item.label}
-              primaryTypographyProps={{ variant: 'body2' }}
-            />
+          <ListItem key={item.label} disablePadding secondaryAction={`(${item.count})`}>
+            <Checkbox edge="start" checked={item.isRefined} onChange={() => refine(item.value)} sx={{ padding: '3px' }} />
+            <ListItemText primary={item.label} primaryTypographyProps={{ variant: 'body2' }} />
           </ListItem>
         ))}
       </List>
-      {canToggleShowMore && (
-        <Button onClick={toggleShowMore}>
-          {isShowingMore ? 'Show less' : 'Show more'}
-        </Button>
-      )}
+      {canToggleShowMore && <Button onClick={toggleShowMore}>{isShowingMore ? 'Show less' : 'Show more'}</Button>}
     </>
   );
 }
