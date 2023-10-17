@@ -1,11 +1,6 @@
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import {
-  DataGrid,
-  GridColDef,
-  GridRenderCellParams,
-  GridValueFormatterParams,
-} from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRenderCellParams, GridValueFormatterParams } from '@mui/x-data-grid';
 import * as React from 'react';
 import { UseHitsProps, useHits } from 'react-instantsearch';
 
@@ -78,7 +73,16 @@ const columns: GridColDef[] = [
   { field: 'voltage', headerName: 'Voltage', type: 'number', width: 75 },
   { field: 'phasePower', headerName: 'Phase Power', type: 'number' },
   { field: 'amperage110', headerName: 'Amps (110V)', type: 'number' },
-  { field: 'amperage220', headerName: 'Amps (220V)', type: 'number' },
+  {
+    field: 'amperage220OnePhase',
+    headerName: 'Amps (220V 1PH)',
+    type: 'number',
+  },
+  {
+    field: 'amperage220ThreePhase',
+    headerName: 'Amps (220V 3PH)',
+    type: 'number',
+  },
   { field: 'bladeGuides', headerName: 'Blade Guides', width: 175 },
   {
     field: 'website',
@@ -103,13 +107,7 @@ export default function ResultsDataGridMui(props: UseHitsProps) {
 
   return (
     <Box sx={{ height: '100vh', width: '100%' }}>
-      <DataGrid
-        rows={hits}
-        columns={columns}
-        rowHeight={30}
-        getRowId={getRowId}
-        disableRowSelectionOnClick
-      />
+      <DataGrid rows={hits} columns={columns} rowHeight={30} getRowId={getRowId} disableRowSelectionOnClick />
     </Box>
   );
 }

@@ -78,8 +78,14 @@ export function Body() {
           <PanelMui header="Phase Power">
             <RefinementListMui attribute="phasePower" />
           </PanelMui>
-          <PanelMui header="Amps (220)">
-            <RangeSliderMui attribute="amperage220" />
+          <PanelMui header="Amps (110V)">
+            <RangeSliderMui attribute="amperage110" />
+          </PanelMui>
+          <PanelMui header="Amps (220V 1PH)">
+            <RangeSliderMui attribute="amperage220OnePhase" />
+          </PanelMui>
+          <PanelMui header="Amps (220V 3PH)">
+            <RangeSliderMui attribute="amperage220ThreePhase" />
           </PanelMui>
           <PanelMui header="Blade Guides">
             <RefinementListMui attribute="bladeGuides" />
