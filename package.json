@@ -7,24 +7,23 @@
     "start": "parcel index.html"
   },
   "dependencies": {
-    "@adobe/react-spectrum": "^3.30.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.11",
-    "@mui/material": "^5.14.11",
-    "@mui/system": "^5.14.11",
-    "@mui/x-data-grid": "^6.16.0",
+    "@mui/icons-material": "^5.14.13",
+    "@mui/material": "^5.14.13",
+    "@mui/system": "^5.14.13",
+    "@mui/x-data-grid": "^6.16.2",
     "@radix-ui/react-slider": "^1.1.2",
     "algoliasearch": "^4.20.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-instantsearch": "^7.1.0"
+    "react-instantsearch": "^7.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.18.0",
-    "@types/react": "^18.2.23",
-    "@types/react-dom": "^18.2.8",
-    "parcel": "^2.9.3",
+    "@types/node": "^18.18.5",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
+    "parcel": "^2.10.0",
     "process": "^0.11.10",
     "typescript": "^5.2.2"
   }
