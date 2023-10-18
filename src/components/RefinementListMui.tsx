@@ -13,6 +13,16 @@ function sortItems(items: any[]) {
   return items;
 }
 
+function getLabel(label: string) {
+  if (label === 'true') {
+    return 'Yes';
+  }
+  if (label === 'false') {
+    return 'No';
+  }
+  return label;
+}
+
 export default function RefinementListMui(props: UseRefinementListProps) {
   const { items, refine, canToggleShowMore, isShowingMore, toggleShowMore } = useRefinementList({ ...props, limit: 1000 });
 
@@ -24,7 +34,7 @@ export default function RefinementListMui(props: UseRefinementListProps) {
         {sortedItems.map((item) => (
           <ListItem key={item.label} disablePadding secondaryAction={`(${item.count})`}>
             <Checkbox edge="start" checked={item.isRefined} onChange={() => refine(item.value)} sx={{ padding: '3px' }} />
-            <ListItemText primary={item.label} primaryTypographyProps={{ variant: 'body2' }} />
+            <ListItemText primary={getLabel(item.label)} primaryTypographyProps={{ variant: 'body2' }} />
           </ListItem>
         ))}
       </List>
