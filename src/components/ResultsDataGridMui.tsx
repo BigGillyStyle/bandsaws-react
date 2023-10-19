@@ -78,11 +78,13 @@ const columns: GridColDef[] = [
     field: 'amperage220OnePhase',
     headerName: 'Amps (220V 1PH)',
     type: 'number',
+    width: 150,
   },
   {
     field: 'amperage220ThreePhase',
     headerName: 'Amps (220V 3PH)',
     type: 'number',
+    width: 150,
   },
   { field: 'bladeGuides', headerName: 'Blade Guides', width: 175 },
   {
