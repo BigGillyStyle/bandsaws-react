@@ -20,7 +20,7 @@
     "react-instantsearch": "^7.3.0"
   },
   "devDependencies": {
-    "@types/node": "^20.9.2",
+    "@types/node": "^20.10.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "parcel": "^2.10.3",
