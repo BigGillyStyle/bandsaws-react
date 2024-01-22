@@ -23,7 +23,7 @@
     "@types/node": "^20.11.1",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "parcel": "^2.10.3",
+    "parcel": "^2.11.0",
     "process": "^0.11.10",
     "typescript": "^5.3.3"
   }
