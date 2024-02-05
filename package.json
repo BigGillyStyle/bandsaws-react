@@ -11,7 +11,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.5",
     "@mui/material": "^5.15.6",
-    "@mui/system": "^5.15.5",
+    "@mui/system": "^5.15.7",
     "@mui/x-data-grid": "^6.19.2",
     "@radix-ui/react-slider": "^1.1.2",
     "algoliasearch": "^4.22.1",
