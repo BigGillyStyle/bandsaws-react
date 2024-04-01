@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/node": "^20.11.28",
     "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.21",
+    "@types/react-dom": "^18.2.23",
     "parcel": "^2.12.0",
     "process": "^0.11.10",
     "typescript": "^5.4.3"
