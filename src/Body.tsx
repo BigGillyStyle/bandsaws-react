@@ -1,7 +1,7 @@
+import { searchClient as algoliasearch } from '@algolia/client-search';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Toolbar from '@mui/material/Toolbar';
-import algoliasearch from 'algoliasearch/lite';
 import React from 'react';
 import { Configure, DynamicWidgets, InstantSearch } from 'react-instantsearch';
 import './Body.css';
