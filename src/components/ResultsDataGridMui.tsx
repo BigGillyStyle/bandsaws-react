@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import { DataGrid, GridColDef, GridRenderCellParams, GridRowParams, GridValueFormatterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRenderCellParams } from '@mui/x-data-grid';
 import * as React from 'react';
 import { UseHitsProps, useHits } from 'react-instantsearch';
 import './ResultsDataGridMui.css';
@@ -18,11 +18,11 @@ const columns: GridColDef[] = [
     field: 'price',
     headerName: 'Price',
     type: 'number',
-    valueFormatter: (params: GridValueFormatterParams<number>) => {
-      if (params.value == null) {
+    valueFormatter: (value: number) => {
+      if (value == null) {
         return '';
       }
-      return USDollar.format(params.value);
+      return USDollar.format(value);
     },
   },
   { field: 'size', headerName: 'Size (in.)', type: 'number' },
@@ -105,7 +105,9 @@ const columns: GridColDef[] = [
 
 const getRowId = (row: any) => row.objectID;
 
-const getRowClassName = (params: GridRowParams) => {
+import { GridRowClassNameParams } from '@mui/x-data-grid';
+
+const getRowClassName = (params: GridRowClassNameParams<any>) => {
   return params.indexRelativeToCurrentPage % 2 === 0 ? 'even-row' : 'odd-row';
 };
 
