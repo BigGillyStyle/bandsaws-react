@@ -106,7 +106,6 @@ const columns: GridColDef[] = [
 const getRowId = (row: any) => row.objectID;
 
 const getRowClassName = (params: GridRowParams) => {
-  console.log('🚀 ~ file: ResultsDataGridMui.tsx:107 ~ getRowClassName ~ params:', params);
   return params.indexRelativeToCurrentPage % 2 === 0 ? 'even-row' : 'odd-row';
 };
 
