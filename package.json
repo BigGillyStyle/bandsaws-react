@@ -30,5 +30,9 @@
     "parcel": "^2.12.0",
     "process": "^0.11.10",
     "typescript": "^5.5.4"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
 }
