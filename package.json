@@ -2,16 +2,13 @@
   "name": "bandsaws-react",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "^20.17.0",
-    "npm": "^10.8.3"
-  },
   "scripts": {
-    "build": "parcel build index.html",
-    "start": "parcel index.html"
+    "clean": "rimraf dist .parcel-cache",
+    "prebuild": "npm run clean",
+    "build": "BABEL_ENV=parcel parcel build index.html --no-cache",
+    "start": "BABEL_ENV=parcel parcel index.html"
   },
   "dependencies": {
-    "@algolia/client-search": "^5.2.3",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.0.1",
@@ -19,20 +16,21 @@
     "@mui/system": "^6.0.2",
     "@mui/x-data-grid": "^7.16.0",
     "@radix-ui/react-slider": "^1.2.0",
+    "algoliasearch": "5.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-instantsearch": "^7.13.0"
   },
   "devDependencies": {
+    "@parcel/core": "^2.12.0",
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
     "@types/node": "^20.16.3",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "parcel": "^2.12.0",
     "process": "^0.11.10",
+    "rimraf": "^6.0.1",
     "typescript": "^5.5.4"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }
