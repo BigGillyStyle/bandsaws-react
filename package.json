@@ -14,7 +14,7 @@
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
     "@mui/system": "^6.1.6",
-    "@mui/x-data-grid": "^7.21.0",
+    "@mui/x-data-grid": "^7.22.1",
     "@radix-ui/react-slider": "^1.2.1",
     "algoliasearch": "5.13.0",
     "react": "^18.3.1",
