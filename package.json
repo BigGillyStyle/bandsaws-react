@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@parcel/core": "^2.14.4",
-    "@parcel/packager-raw-url": "^2.14.4",
+    "@parcel/packager-raw-url": "^2.15.1",
     "@parcel/transformer-webmanifest": "^2.14.4",
     "@types/node": "^22.15.17",
     "@types/react": "^19.1.2",
