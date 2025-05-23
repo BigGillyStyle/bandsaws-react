@@ -26,7 +26,7 @@
     "@parcel/packager-raw-url": "^2.15.1",
     "@parcel/transformer-webmanifest": "^2.15.1",
     "@types/node": "^22.15.18",
-    "@types/react": "^19.1.4",
+    "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "parcel": "^2.15.1",
     "process": "^0.11.10",
