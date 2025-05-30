@@ -28,7 +28,7 @@
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
-    "parcel": "^2.15.1",
+    "parcel": "^2.15.2",
     "process": "^0.11.10",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
