@@ -22,6 +22,39 @@ if (!algoliaAppId || !algoliaApiKey) {
 const algoliaClient = algoliasearch(algoliaAppId, algoliaApiKey);
 const indexName = 'bandsaws';
 
+const fieldMapping: { [key: string]: string } = {
+  // Fields that need transformation
+  amperage_110: 'amperage110',
+  amperage_220_one_phase: 'amperage220OnePhase',
+  amperage_220_three_phase: 'amperage220ThreePhase',
+  amperage_440_three_phase: 'amperage440ThreePhase',
+  blade_guides: 'bladeGuides',
+  dust_ports: 'dustPorts',
+  foot_brake: 'footBrake',
+  image_url: 'imageURL',
+  magnetic_switch: 'magneticSwitch',
+  max_blade_width_inches: 'maxBladeWidthInches',
+  max_cut_height_inches: 'maxCutHeightInches',
+  max_cut_width_inches: 'maxCutWidthInches',
+  min_blade_width_inches: 'minBladeWidthInches',
+  net_weight_pounds: 'netWeightPounds',
+  phase_power: 'phasePower',
+  shipping_weight_pounds: 'shippingWeightPounds',
+  algolia_object_id: 'algoliaObjectId',
+
+  // Fields that don't need transformation (already match)
+  id: 'id',
+  make: 'make',
+  model: 'model',
+  size: 'size',
+  price: 'price',
+  hp: 'hp',
+  voltage: 'voltage',
+  website: 'website',
+  created_at: 'created_at',
+  updated_at: 'updated_at',
+};
+
 async function main() {
   try {
     // 1. Clear all records from Algolia index
@@ -51,7 +84,7 @@ async function main() {
       batchWriteParams: {
         requests: bandsaws.map((bandsaw) => ({
           action: 'addObject',
-          body: bandsaw,
+          body: Object.fromEntries(Object.entries(bandsaw).map(([key, value]) => [fieldMapping[key] || key, value])),
         })),
       },
     });
