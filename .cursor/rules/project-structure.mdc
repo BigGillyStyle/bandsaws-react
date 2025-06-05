@@ -1,0 +1,31 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Project Structure Guide
+
+This is a React-based bandsaw search application. Here's the key structure:
+
+## Main Application Files
+- The application entry point is [src/index.tsx](mdc:src/index.tsx)
+- Main application component is [src/App.tsx](mdc:src/App.tsx)
+- Core layout components:
+  - [src/Header.tsx](mdc:src/Header.tsx) - Application header
+  - [src/Body.tsx](mdc:src/Body.tsx) - Main content area with styling in [src/Body.css](mdc:src/Body.css)
+
+## Data Management
+- Main data file: [data/bandsaws.json](mdc:data/bandsaws.json)
+- Data processing utilities:
+  - [process_amperage.ts](mdc:process_amperage.ts) - Processes amperage data in bandsaw records
+  - [data/import-bandsaws.ts](mdc:data/import-bandsaws.ts) - Data import utilities
+
+## Configuration
+- Project configuration in [package.json](mdc:package.json)
+- Code style configuration in [.prettierrc](mdc:.prettierrc) and [.editorconfig](mdc:.editorconfig)
+
+## Development Guidelines
+1. All React components should be placed in the `src/components` directory
+2. Data processing scripts should be placed in the `data` directory
+3. Follow the existing TypeScript patterns for type definitions
+4. Use the provided Prettier and EditorConfig settings for consistent code formatting
