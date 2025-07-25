@@ -22,7 +22,7 @@
     "algoliasearch": "^5.32.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-instantsearch": "^7.16.1"
+    "react-instantsearch": "^7.16.2"
   },
   "devDependencies": {
     "@parcel/core": "^2.15.4",
