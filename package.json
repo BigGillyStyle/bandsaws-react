@@ -25,7 +25,7 @@
     "react-instantsearch": "^7.16.3"
   },
   "devDependencies": {
-    "@parcel/core": "^2.15.4",
+    "@parcel/core": "^2.16.0",
     "@parcel/packager-raw-url": "^2.15.4",
     "@parcel/transformer-webmanifest": "^2.15.4",
     "@supabase/supabase-js": "^2.57.4",
