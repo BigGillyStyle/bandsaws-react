@@ -31,7 +31,7 @@
     "@supabase/supabase-js": "^2.80.0",
     "@types/node": "^22.19.0",
     "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
+    "@types/react-dom": "^19.2.3",
     "buffer": "^6.0.3",
     "parcel": "^2.16.1",
     "process": "^0.11.10",
