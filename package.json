@@ -30,7 +30,7 @@
     "@parcel/transformer-webmanifest": "^2.16.1",
     "@supabase/supabase-js": "^2.81.1",
     "@types/node": "^22.19.1",
-    "@types/react": "^19.2.5",
+    "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "buffer": "^6.0.3",
     "parcel": "^2.16.1",
