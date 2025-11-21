@@ -28,7 +28,7 @@
     "@parcel/core": "^2.16.1",
     "@parcel/packager-raw-url": "^2.16.1",
     "@parcel/transformer-webmanifest": "^2.16.1",
-    "@supabase/supabase-js": "^2.81.1",
+    "@supabase/supabase-js": "^2.84.0",
     "@types/node": "^22.19.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
