@@ -41,5 +41,6 @@
   },
   "@parcel/resolver-default": {
     "packageExports": true
-  }
+  },
+  "packageManager": "npm@11.6.2"
 }
