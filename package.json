@@ -22,13 +22,13 @@
     "algoliasearch": "^5.49.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-instantsearch": "^7.27.0"
+    "react-instantsearch": "^7.28.0"
   },
   "devDependencies": {
     "@parcel/core": "^2.16.4",
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
-    "@supabase/supabase-js": "^2.99.1",
+    "@supabase/supabase-js": "^2.99.3",
     "@types/node": "^22.19.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
