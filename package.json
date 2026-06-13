@@ -15,7 +15,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.9",
-    "@mui/material": "^7.3.5",
+    "@mui/material": "^9.1.1",
     "@mui/system": "^7.3.5",
     "@mui/x-data-grid": "^8.28.6",
     "@radix-ui/react-slider": "^1.4.0",
