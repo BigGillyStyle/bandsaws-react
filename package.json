@@ -18,17 +18,17 @@
     "@mui/material": "^7.3.5",
     "@mui/system": "^7.3.5",
     "@mui/x-data-grid": "^8.28.6",
-    "@radix-ui/react-slider": "^1.4.3",
+    "@radix-ui/react-slider": "^1.4.5",
     "algoliasearch": "^5.56.0",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
-    "react-instantsearch": "^7.39.1"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-instantsearch": "^7.41.0"
   },
   "devDependencies": {
     "@parcel/core": "^2.16.4",
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
-    "@supabase/supabase-js": "^2.110.7",
+    "@supabase/supabase-js": "^2.110.8",
     "@types/node": "^22.19.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
