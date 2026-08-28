@@ -19,19 +19,19 @@
     "@mui/system": "^7.3.5",
     "@mui/x-data-grid": "^8.28.6",
     "@radix-ui/react-slider": "^1.4.7",
-    "algoliasearch": "^5.56.0",
+    "algoliasearch": "^5.57.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "react-instantsearch": "^7.44.1"
+    "react-instantsearch": "^7.45.0"
   },
   "devDependencies": {
     "@parcel/core": "^2.16.4",
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
-    "@supabase/supabase-js": "^2.112.3",
+    "@supabase/supabase-js": "^2.112.4",
     "@types/node": "^22.19.1",
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react-dom": "^19.2.5",
     "buffer": "^6.0.3",
     "parcel": "^2.16.4",
     "process": "^0.11.10",
