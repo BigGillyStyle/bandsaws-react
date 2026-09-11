@@ -29,7 +29,7 @@
     "@parcel/packager-raw-url": "^2.16.4",
     "@parcel/transformer-webmanifest": "^2.16.4",
     "@supabase/supabase-js": "^2.116.0",
-    "@types/node": "^22.19.1",
+    "@types/node": "^26.5.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "buffer": "^6.0.3",
